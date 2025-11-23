@@ -98,7 +98,7 @@ async function decryptText(text,password) {
             encryptedData
         );
 
-        console.log( new TextDecoder().decode(decrypted));
+        return new TextDecoder().decode(decrypted);
     } catch (err) {
         console.log("Error: " + err)
     }
@@ -153,6 +153,7 @@ function startScan() {
 </script>
 </body>
 </html>
+
 
 
 
