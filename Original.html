@@ -132,11 +132,11 @@ function startScan() {
     reader.start(
         { facingMode: "environment" },
         { fps: 10, qrbox: 250 },
-        async (qrText) => { alert(qrText)
+        async (qrText) => {
             reader.stop();
 
             try {
-                const encryptedObj = JSON.parse(qrText);
+                const encryptedObj = qrText// JSON.parse(qrText);
                 alert(encryptedObj);
                 const password = prompt("Enter password to decrypt:");
                 
@@ -153,6 +153,7 @@ function startScan() {
 </script>
 </body>
 </html>
+
 
 
 
