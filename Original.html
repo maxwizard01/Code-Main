@@ -141,6 +141,7 @@ function startScan() {
                 const password = prompt("Enter password to decrypt:");
                 
                 const decrypted = await decryptText(encryptedObj, password);
+                alert(decrypted)
                 document.getElementById("decryptedOutput").innerHTML = decrypted;
 
             } catch (err) {
@@ -153,6 +154,7 @@ function startScan() {
 </script>
 </body>
 </html>
+
 
 
 
